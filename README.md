@@ -1,3 +1,3 @@
-# A Physics WEBsite
-## A website for a purely physics (astrophysics, to specify) nerd who sadly became a programming student
+# A Me WEBsite
+## A website for an astrophysics lover but ended up be a programmer
 SECOND Self Project
