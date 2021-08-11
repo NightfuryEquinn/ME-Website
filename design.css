@@ -7,36 +7,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Whole Website */
+/* For Header */
+header {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* For Body */
 body {
     background-color: #37474f;
     color: ghostwhite;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
-/* Navigation Bar */
-.navContainer {
-    height: 50px;
-    width: auto;
-    background-color: #cfd8dc;
-    position: sticky;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-
-.buttonDesign {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-    background: none;
-    border: none;
-    color: ghostwhite;
-}
-
-/* Footer */
+/* For Footer */
