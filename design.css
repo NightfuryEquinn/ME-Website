@@ -7,16 +7,12 @@ html {
     scroll-behavior: smooth;
 }
 
+/* For Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* For Header */
 header {
     font-family: 'Raleway', sans-serif;
 }
-
-/* For Body */
-body {
-    background-color: #37474f;
-    color: ghostwhite;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* For Footer */
