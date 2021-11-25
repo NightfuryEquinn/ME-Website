@@ -1,32 +1,126 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <!--How code being decoded-->
-    <meta charset = "utf-8">
-    <!--How page being display based on viewport-->
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1 shrink-to-fit = no">
-    <!--Add author, web description, keywords for search engine, and copyright-->
-    <meta name = "author" content = "Yip Zi Xian | Nightfury">
-    <meta name = "description" content = "A second self project during semester break in enhancing my HTML CSS and JS.">
-    <meta name = "keywords" content = "Yip Zi Xian, YZX">
-    <meta name = "copyright" content = "Copyright 2021 Yip Zi Xian ">
-    <!--Link to CSS-->
-    <link rel = "stylesheet" href = "design.css">
-    <!--Link to JavaScript-->
-    <script src = "behaviour.js" defer></script>
-    <!--Link to Font Awesome v4 and v5-->
-    <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-    <!--Link to Google Font-->
-    <link rel = "preconnect" href = "https://fonts.googleapis.com">
-    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:ital@1&display=swap" >
-    <!--Link to Pictures file-->
-    <link rel = "icon" type = image/png href = Pictures/Black.png>
-    <!--Title-->
-    <title>A ME Intro</title>
-</head>
-<body>
-</body>
+    <head>
+        <!--How code being decoded-->
+        <meta charset = "utf-8">
+        <!--How page being display based on viewport-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1 shrink-to-fit = no">
+        <!--Add author, web description, keywords for search engine, and copyright-->
+        <meta name = "author" content = "Yip Zi Xian | Nightfury">
+        <meta name = "description" content = "A second self project during semester break in enhancing my HTML CSS and JS.">
+        <meta name = "keywords" content = "Yip Zi Xian, YZX">
+        <meta name = "copyright" content = "Copyright 2021 Yip Zi Xian ">
+        <!--Link to CSS-->
+        <link rel = "stylesheet" href = "design.css">
+        <!--Link to JavaScript-->
+        <script src = "behaviour.js" defer></script>
+        <!--Link to Font Awesome v4 and v5-->
+        <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+        <!--Link to Google Font-->
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Abel&family=Libre+Baskerville:wght@700&display=swap" rel = "stylesheet">
+        <!--Link to Pictures file-->
+        <link rel = "icon" type = image/png href = Pictures/Black.png>
+        <!--Title-->
+        <title>A ME WEBSITE</title>
+    </head>
+    <body>
+        <div class='body-container'>
+            <!--Always Display Icon-->
+            <div class='titlebox-topleft'>
+                <video width="300px" height="300px" autoplay muted loop>
+                    <source src="Pictures/ME WEBSITE.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!--Always Menu-->
+            <div class="left-menu">
+                <a onclick="anchorLink(6)">Home</a>
+                <a onclick="anchorLink(1)">Casual</a>
+                <a onclick="anchorLink(2)">Work</a>
+                <a onclick="anchorLink(3)">Sport</a>
+                <a onclick="anchorLink(4)">Game</a>
+                <a onclick="anchorLink(5)">Linktree</a>
+            </div>
+
+            <!--Animated Title Icon Page-->
+            <div class='titlebox-middle'>
+                <video width="600px" height="600px" autoplay muted loop>
+                    <source src="Pictures/ME WEBSITE.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!--Main Page-->
+            <div class='main-page'>
+                <div class='parallax-img' id="pi1" title='ILLUSTRATION BY Woon Zhi-le'></div>
+                <div class='parallax-img' id="pi2" title='ILLUSTRATION BY Woon Zhi-le'></div>
+                <div class='nav-button'>
+                    <span style='--icon:1'>
+                        <a onclick="anchorLink(1)">
+                            <p>CASUAL</p>
+                            <i class="fas fa-chess-pawn fa-2x"></i>
+                        </a>
+                    </span>
+                    <span style='--icon:2'>
+                        <a onclick="anchorLink(2)">
+                            <p>WORK</p>
+                            <i class="fas fa-chess-king fa-2x"></i>
+                        </a>
+                    </span>
+                    <span style='--icon:3'>
+                        <a onclick="anchorLink(3)">
+                            <p>SPORT</p>
+                            <i class="fas fa-quidditch fa-2x"></i>
+                        </a>
+                    </span>
+                    <span style='--icon:4'>
+                        <a onclick="anchorLink(4)">
+                            <p>GAME</p>
+                            <i class="fas fa-dice-d20 fa-2x"></i>
+                        </a>
+                    </span>
+                    <span style='--icon:5'>
+                        <a onclick="anchorLink(5)">
+                            <p>LINKTREE</p>
+                            <i class="fas fa-address-book fa-2x"></i>
+                        </a>
+                    </span>
+                    <span style='--icon:6'>
+                        <a onclick="anchorLink(6)">
+                            <p>HOME</p>
+                            <i class="fas fa-home fa-2x"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <!--Second Page-->
+            <div class='second-page'>
+                <h1>2</h1>
+            </div>
+            
+            <!--Third Page-->
+            <div class='third-page'>
+                <h1>3</h1>
+            </div>
+
+            <!--Fourth Page-->
+            <div class='fourth-page'>
+                <h1>4</h1>
+            </div>
+
+            <!--Fifth Page-->
+            <div class='fifth-page'>
+                <h1>5</h1>
+            </div>
+
+            <!--Sixth Page-->
+            <div class='sixth-page'>
+                <h1>6</h1>
+            </div>
+        </div>
+    </body>
 </html>

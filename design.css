@@ -1,3 +1,21 @@
+/*
+#d1d7e0 - Smokish White
+#d1e8e2 - Blueish White
+#edf5e1 - Not Very White White
+#5cdb95 - Mint
+#379683 - Dark Blue Green
+#116466 - Minty Dark Green
+#05386B - Kinda Blue But Green
+#2c3531 - Blackish Gray
+
+Title Font - 'Libre Baskerville', serif
+Other Font - 'Abel', sans-serif
+*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +25,216 @@ html {
     scroll-behavior: smooth;
 }
 
-/* For Body */
 body {
-    font-family: 'Montserrat', sans-serif;
+    height: 5000px;
+    width: 1535px;
+    background-color: #d1d7e0;
+    font-family: 'Abel', sans-serif;
 }
 
-/* For Header */
-header {
-    font-family: 'Raleway', sans-serif;
+/* Always Display Icon */
+.titlebox-topleft {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+
+/* Always Menu */
+.left-menu {
+    margin-left: 25px;
+    top: 350px;
+    left: 0px;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100px);
+    z-index: 100;
+    animation-name: slideOut;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.left-menu a {
+    margin-bottom: 30px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    font-size: 20px !important;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Animated Title Icon Page */
+.titlebox-middle {
+    display: flex;
+    position: fixed;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(-100px);
+    animation-name: fadeOutUp;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Body Container */
+.body-container {
+    height: 697px;
+    width: 1535px;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* All Page */
+.main-page, .second-page, .third-page, .fourth-page, .fifth-page, .sixth-page {
+    height: 697px;
+    width: 1535px;
+    position: fixed;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Main Page */
+.main-page .parallax-img {
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%, 85%;
+    transition-timing-function: cubic-bezier(.27,.63,.6,.77);
+    transition-duration: 1s;
+}
+
+.main-page #pi1 {
+    background-image: url(Pictures/Black.png);
+    transform: translate(0px, 0px);
+    z-index: 100;
+}
+
+.main-page #pi2 {
+    background-image: url(Pictures/circle.png);
+    transform: translate(0px, 0px);
+    z-index: 99;
+}
+
+/* Navigation Button */
+.nav-button {
+    height: 500px;
+    width: 500px;
+    font-size: 16px;
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+}
+
+.nav-button span {
+    position: absolute;
+    top: 212.5px;
+    left: -100px;
+    transform: rotate(calc(360deg / 6 * var(--icon)));
+    transform-origin: 350px;
+}
+
+.nav-button span a {
+    color: #2c3531;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-button span a p {
+    position: absolute;
+}
+
+.nav-button span:nth-child(1) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(-125px, 25px);
+}
+
+.nav-button span:nth-child(2) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(70px, 5px);
+}
+
+.nav-button span:nth-child(3) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(90px, -25px);
+}
+
+.nav-button span:nth-child(4) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(110px, -25px);
+}
+
+.nav-button span:nth-child(5) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(-100px, 20px);
+}
+
+.nav-button span:nth-child(6) a p {
+    transform: rotate(calc(360deg / -6 * var(--icon))) translate(-90px, 30px);
+}
+
+.nav-button span a i {
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1e8e2;
+    box-shadow: 3.75px 3.75px #116466;
+    border-radius: 50px;
+    transform: rotate(calc(360deg / -6 * var(--icon)));
+    transition-duration: 1s;
+}
+
+.nav-button span a:hover i {
+    color: #d1e8e2;
+    background-color: #116466;
+    box-shadow: -3.75px -3.75px #379683;
+}
+
+/* Second Page */

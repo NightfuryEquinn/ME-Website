@@ -1,0 +1,38 @@
+/*
+#d1d7e0 - Smokish White
+#d1e8e2 - Blueish White
+#edf5e1 - Not Very White White
+#5cdb95 - Mint
+#379683 - Dark Blue Green
+#05386B - Kinda Blue But Green
+#116466 - Minty Dark Green
+#2c3531 - Blackish Gray
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;   
+}
+
+body {
+    height: 1000px;
+    width: auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first, .second {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    display: none;
+    position: fixed;
+}
