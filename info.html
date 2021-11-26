@@ -29,6 +29,14 @@
     </head>
     <body>
         <div class='body-container'>
+            <!--Background Music-->
+            <audio autoplay muted loop id="bgm"><source src="Pictures/Snow-Buried Tales.mp3" type="audio/mpeg"></audio>
+            
+            <!--On Off Music-->
+            <div id="onoff-button">
+                <button onclick="onoff()"><i class="fas fa-music fa-1x"></i></button>
+            </div>
+
             <!--Always Display Icon-->
             <div class='titlebox-topleft'>
                 <video width="300px" height="300px" autoplay muted loop>
@@ -38,12 +46,30 @@
 
             <!--Always Menu-->
             <div class="left-menu">
-                <a onclick="anchorLink(6)">Home</a>
-                <a onclick="anchorLink(1)">Casual</a>
-                <a onclick="anchorLink(2)">Work</a>
-                <a onclick="anchorLink(3)">Sport</a>
-                <a onclick="anchorLink(4)">Game</a>
-                <a onclick="anchorLink(5)">Linktree</a>
+                <span style="--lf:1">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(6)">Home</a>
+                </span>
+                <span style="--lf:2">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(1)">Casual</a>
+                </span>
+                <span style="--lf:3">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(2)">Work</a>
+                </span>
+                <span style="--lf:4">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(3)">Sport</a>
+                </span>
+                <span style="--lf:5">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(4)">Game</a>
+                </span>
+                <span style="--lf:6">
+                    <div class="line-pointer"></div>
+                    <a onclick="anchorLink(5)">Linktree</a>
+                </span>
             </div>
 
             <!--Animated Title Icon Page-->

@@ -121,7 +121,7 @@ function delayParallax (e) {
 
 // Active Button for Left Menu
 var leftMenu = document.getElementsByClassName("left-menu")[0];
-var leftMenuAnchor = document.getElementsByTagName("a");
+var leftMenuAnchor = leftMenu.getElementsByTagName("a");
 
 for (var i = 0; i < leftMenuAnchor.length; i++) {
     leftMenuAnchor[i].addEventListener("click", function() {
@@ -133,4 +133,15 @@ for (var i = 0; i < leftMenuAnchor.length; i++) {
             this.className += "active";
         };
     });
+}
+
+// Mute and Unmute Background Music
+function onoff() {
+    var bgm = document.getElementById("bgm");
+    if (bgm.muted == true) {
+        bgm.muted = false;
+        bgm.play();
+    } else {
+        bgm.muted = true;
+    }
 }
