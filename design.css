@@ -78,17 +78,27 @@ body {
 
 /* Always Menu */
 .left-menu {
+    padding-right: 90px;
     top: 350px;
     left: 0px;
     display: none;
     position: fixed;
     flex-direction: column;
+    color: #d1e8e2;
+    background-image: linear-gradient(90deg, #05386BCF 100px, #d1d7e0 1000px);
+    box-shadow: 10px 10px #2c3531, 
+                10px -10px #2c3531,
+                0 10px #d1d7e0,
+                0 -10px #d1d7e0,
+                -10px 20px #116466,
+                -10px -20px #116466;
     z-index: 100;
 }
 
 .left-menu span {
     margin-left: 125px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     opacity: 0;
     transform: translateX(-100px);
     animation-name: slideOut;
@@ -121,7 +131,8 @@ body {
 .left-menu span:hover .line-pointer, .active-line {
     width: 300px;
     height: 2px;
-    background-color: #05386B;
+    position: absolute;
+    background-color: #d1e8e2;
     transform: translate(-312.5px, 13px);
 }
 
@@ -290,33 +301,19 @@ body {
     box-shadow: -3.75px -3.75px #379683;
 }
 
-/* Second Page */
-.scd-title {
-    padding: 20px;
-    position: absolute;
-    top: 100px;
-    right: 300px;
-    font-size: 25px;
-    font-family: 'Libre Baskerville', serif;
-    letter-spacing: 0.5px;
-    color: #d1e8e2;
-    background-color: #2c3531;
-    box-shadow: 10px 0px #5cdb95;
-    z-index: 100;
-}
-
-.scd-container {
+/* All Page and Slide Container (Start from second to sixth) */
+.scd-container, .trd-container, .frh-container, .fid-container, .sxt-container {
     height: 450px;
     width: 850px;
     position: absolute;
     color: #2c3531;
     background-color: #edf5e1;
     box-shadow: 5px 5px 5px #d1e8e2, -5px -5px 5px #d1e8e2;
-    transform: translate(75px, 37.5px);
+    transform: translate(150px, 37.5px);
     overflow: hidden;
 }
 
-.scd-slide {
+.scd-slide, .trd-slide, .frh-slide, .fid-slide, .sxt-slide {
     height: 450px;
     width: 850px;
     display: none;
@@ -326,13 +323,31 @@ body {
     align-items: center;
 }
 
+/* Second Page */
+.scd-title {
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    right: 225px;
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 0.5px;
+    color: #d1e8e2;
+    background-color: #2c3531;
+    box-shadow: 10px 0px #5cdb95;
+    z-index: 100;
+}
+
 .scd-imagebox {
     height: 300px;
     width: 300px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient(90deg, #05386B, #116466, #379683);
     opacity: 0;
-    transform: rotate(0deg) translateY(0px) translateX(-100px);
+    transform: rotate(0deg) translateX(-100px);
     animation-name: scdFlyLeft;
     animation-duration: 2s;
     animation-delay: 2s;
@@ -343,21 +358,21 @@ body {
 @keyframes scdFlyLeft {
     0% {
         opacity: 0;
-        transform: rotate(0deg) translateY(0px) translateX(-100px);
+        transform: rotate(0deg) translateX(-100px);
     }
     100% {
         opacity: 1;
-        transform: rotate(2.5deg) translateY(-25px) translateX(0px);
+        transform: rotate(2.5deg) translateX(0px);
     }
 }
 
 .scd-imagebox img {
     max-width: 100%;
-    transform: rotate(-5deg) translateY(25px);
+    transform: rotate(-5deg);
 }
 
 .scd-textbox {
-    padding-left: 10px;
+    padding-left: 15px;
     padding-bottom: 10px;
     height: 300px;
     width: 300px;
@@ -390,3 +405,98 @@ body {
 .scd-slide-button i:hover {
     color: #5cdb95;
 }
+
+/* Third Page */
+.trd-title {
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    left: 525px;
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 0.5px;
+    color: #d1e8e2;
+    background-color: #2c3531;
+    box-shadow: -10px 0px #05386BBB;
+    z-index: 100;
+}
+
+.trd-textbox {
+    padding-right: 15px;
+    padding-bottom: 10px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-align: justify;
+    border-right: 2.5px solid #116466;
+    border-bottom: 2.5px solid #116466;
+    overflow-y: scroll;
+}
+
+.trd-imagebox {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg, #edf5e1, #cdd4c1);
+    box-shadow: 0 0 #2c3531;
+    overflow: hidden;
+    opacity: 0.1;
+    transform: skewX(10deg) skewY(-30deg);
+    animation-name: trdBlinkIn;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes trdBlinkIn {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 7.5px 7.5px #2c3531;
+    }
+}
+
+.trd-imagebox img {
+    max-height: 100%;
+    transform: skewX(-10deg) skewY(30deg);
+}
+
+.trd-slide-button {
+    height: 30px;
+    width: 150px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2c3531;
+}
+
+.trd-slide-button i {
+    color: #49524e;
+}
+
+.trd-slide-button i:hover {
+    color: #5cdb95;
+}
+
+/* Fourth Page */
