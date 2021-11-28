@@ -119,39 +119,6 @@ function delayParallax (e) {
     }, 0);
 };
 
-// Active Button for Left Menu
-var leftMenu = document.getElementsByClassName("left-menu")[0];
-var leftMenuAnchor = leftMenu.getElementsByTagName("a");
-
-for (var i = 0; i < leftMenuAnchor.length; i++) {
-    leftMenuAnchor[i].addEventListener("click", function() {
-        var activeAnchor = document.getElementsByClassName("active");
-        if (activeAnchor.length == 0) {
-            this.className += "active";
-        } else if (activeAnchor.length == 1) {
-            activeAnchor[0].className = activeAnchor[0].className.replace("active", "");
-            this.className += "active";
-        };
-    });
-};
-
-// Active Line Pointer for Left Menu
-var leftMenu = document.getElementsByClassName("left-menu")[0];
-var leftMenuSpan = leftMenu.getElementsByTagName("span");
-
-for (var i = 0; i < leftMenuSpan.length; i++) {
-    leftMenuSpan[i].addEventListener("click", function () {
-        var activeLine = document.getElementsByClassName("active-line");
-        var currentLine = this.getElementsByClassName("line-pointer");
-        if (activeLine.length == 0) {
-            currentLine[0].className = currentLine[0].className.replace("line-pointer", "active-line");   
-        } else if (activeLine.length == 1) {
-            activeLine[0].className = activeLine[0].className.replace("active-line", "line-pointer");
-            currentLine[0].className = currentLine[0].className.replace("line-pointer", "active-line");   
-        };
-    });
-};
-
 // Mute and Unmute Background Music
 function onoff() {
     var bgm = document.getElementById("bgm");
@@ -215,4 +182,31 @@ function showtrdSlide(t) {
     }
 
     slides[deftrdSlide - 1].style.display = "flex";
+};
+
+// Fourth Page Slideshow
+var deffrhSlide = 1;
+showfrhSlide(deffrhSlide);
+
+function frhSlide(t) {
+    showfrhSlide(deffrhSlide = t);
+};
+
+function showfrhSlide(t) {
+    var i;
+    var slides = document.getElementsByClassName("frh-slide");
+
+    if (t > slides.length) {
+        deffrhSlide = 1;
+    };
+
+    if (t < 1) {
+        deffrhSlide = slides.length;
+    };
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[deffrhSlide - 1].style.display = "flex";
 };
