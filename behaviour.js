@@ -133,7 +133,24 @@ for (var i = 0; i < leftMenuAnchor.length; i++) {
             this.className += "active";
         };
     });
-}
+};
+
+// Active Line Pointer for Left Menu
+var leftMenu = document.getElementsByClassName("left-menu")[0];
+var leftMenuSpan = leftMenu.getElementsByTagName("span");
+
+for (var i = 0; i < leftMenuSpan.length; i++) {
+    leftMenuSpan[i].addEventListener("click", function () {
+        var activeLine = document.getElementsByClassName("active-line");
+        var currentLine = this.getElementsByClassName("line-pointer");
+        if (activeLine.length == 0) {
+            currentLine[0].className = currentLine[0].className.replace("line-pointer", "active-line");   
+        } else if (activeLine.length == 1) {
+            activeLine[0].className = activeLine[0].className.replace("active-line", "line-pointer");
+            currentLine[0].className = currentLine[0].className.replace("line-pointer", "active-line");   
+        };
+    });
+};
 
 // Mute and Unmute Background Music
 function onoff() {
@@ -144,4 +161,31 @@ function onoff() {
     } else {
         bgm.muted = true;
     }
-}
+};
+
+// Second Page Slideshow
+var defSlide = 1;
+showSlide(defSlide);
+
+function slideNumber(t) {
+    showSlide(defSlide = t);
+};
+
+function showSlide(t) {
+    var i;
+    var slides = document.getElementsByClassName("scd-slide");
+
+    if (t > slides.length) {
+        defSlide = 1;
+    };
+
+    if (t < 1) {
+        defSlide = slides.length;
+    };
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[defSlide - 1].style.display = "flex";
+};
