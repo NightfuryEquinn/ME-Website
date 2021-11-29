@@ -1,7 +1,7 @@
 // Scroll Content
 function scrollContent() {
     var ypx = document.documentElement.scrollTop;
-    if (ypx < 200) {
+    if (ypx < 1000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "none";
         document.getElementsByClassName("left-menu")[0].style.display = "none";
@@ -12,7 +12,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "none";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 400) {
+    } else if (ypx < 2000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "none";
@@ -23,7 +23,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "none";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 600) {
+    } else if (ypx < 3000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -34,7 +34,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "none";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 800) {
+    } else if (ypx < 4000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -45,7 +45,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "none";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 1000) {
+    } else if (ypx < 5000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -56,7 +56,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "none";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 1200) {
+    } else if (ypx < 6000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -67,7 +67,7 @@ function scrollContent() {
         document.getElementsByClassName("fifth-page")[0].style.display = "flex";
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
-    } else if (ypx < 1400) {
+    } else if (ypx < 7000) {
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -85,17 +85,17 @@ window.onscroll = scrollContent;
 // Anchor Link
 function anchorLink(a) {
     if (a == 1) {
-        window.scrollTo(0, 500);
+        window.scrollTo(0, 2500);
     } else if (a == 2) {
-        window.scrollTo(0, 700);
+        window.scrollTo(0, 3500);
     } else if (a == 3) {
-        window.scrollTo(0, 900);
+        window.scrollTo(0, 4500);
     } else if (a == 4) {
-        window.scrollTo(0, 1100);
+        window.scrollTo(0, 5500);
     } else if (a == 5) {
-        window.scrollTo(0, 1300);
+        window.scrollTo(0, 6500);
     } else if (a == 6) {
-        window.scrollTo(0, 300);
+        window.scrollTo(0, 1500);
     };
 };
 
@@ -209,4 +209,31 @@ function showfrhSlide(t) {
     }
 
     slides[deffrhSlide - 1].style.display = "flex";
+};
+
+// Fifth Page Slideshow
+var deffidSlide = 1;
+showfidSlide(deffidSlide);
+
+function fidSlide(t) {
+    showfidSlide(deffidSlide = t);
+};
+
+function showfidSlide(t) {
+    var i;
+    var slides = document.getElementsByClassName("fid-slide");
+
+    if (t > slides.length) {
+        deffidSlide = 1;
+    };
+
+    if (t < 1) {
+        deffidSlide = slides.length;
+    };
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[deffidSlide - 1].style.display = "flex";
 };
