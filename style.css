@@ -94,6 +94,32 @@ body {
     letter-spacing: 1px;
 }
 
+/* Display Song Name */
+.displayName {
+    top: 25px;
+    position: fixed;
+    display: block;
+    font-size: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    z-index: 100;
+    animation-name: none;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes InOut {
+    0% { 
+        opacity: 0
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Always Rotating Record Disc */
 .record-container {
     height: 500px;

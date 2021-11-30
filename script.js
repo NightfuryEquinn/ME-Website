@@ -130,21 +130,29 @@ function delayParallax (e) {
 var bgm1 = document.getElementById("bgmOne");
 var bgm2 = document.getElementById("bgmTwo");
 var bgm3 = document.getElementById("bgmThree");
+
+// Spin Record Disc
 var playDisc = document.getElementsByClassName("record-container")[0];
+
+// Display Song Name
+var songName = document.getElementsByClassName("displayName")[0];
 
 function onoff() {
     if (bgm1.muted == false) {
         bgm1.muted = true;
         bgm1.pause();
         playDisc.style.animationName = "";
+        songName.style.animationName = "";
     } else if (bgm2.muted == false) {
         bgm2.muted = true;
         bgm2.pause();
         playDisc.style.animationName = "";
+        songName.style.animationName = "";
     } else if (bgm3.muted == false) {
         bgm3.muted = true;
         bgm3.pause();
         playDisc.style.animationName = "";
+        songName.style.animationName = "";
     }
 };
 
@@ -154,6 +162,8 @@ function onOne() {
         bgm1.muted = false;
         bgm1.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Snow-Buried Tales by HoYoMix";
     } else {
         bgm2.muted = true;
         bgm2.pause();
@@ -162,6 +172,8 @@ function onOne() {
         bgm1.muted = false;
         bgm1.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Snow-Buried Tales by HoYoMix";
     }
 };
 
@@ -171,6 +183,8 @@ function onTwo() {
         bgm2.muted = false;
         bgm2.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Glistening Shards by HoYoMix";
     } else {
         bgm1.muted = true;
         bgm1.pause();
@@ -179,6 +193,8 @@ function onTwo() {
         bgm2.muted = false;
         bgm2.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Glistening Shards by HoYoMix";
     }
 };
 
@@ -188,6 +204,8 @@ function onThree() {
         bgm3.muted = false;
         bgm3.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Chattering Snowflakes by HoYoMix";
     } else {
         bgm1.muted = true;
         bgm1.pause();
@@ -196,6 +214,8 @@ function onThree() {
         bgm3.muted = false;
         bgm3.play();
         playDisc.style.animationName = "rotate";
+        songName.style.animationName = "InOut";
+        songName.innerText = "Now Playing - Chattering Snowflakes by HoYoMix";
     }
 };
     
