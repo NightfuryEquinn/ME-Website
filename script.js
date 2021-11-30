@@ -2,6 +2,7 @@
 function scrollContent() {
     var ypx = document.documentElement.scrollTop;
     if (ypx < 1000) {
+        document.getElementsByClassName("record-container")[0].style.display = "none";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "none";
         document.getElementsByClassName("left-menu")[0].style.display = "none";
@@ -13,6 +14,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 2000) {
+        document.getElementsByClassName("record-container")[0].style.display = "none";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "none";
@@ -24,6 +26,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 3000) {
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -35,6 +38,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 4000) {
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -46,6 +50,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 5000) {
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -57,6 +62,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 6000) {
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -68,6 +74,7 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 7000) {
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
         document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "flex";
@@ -123,17 +130,21 @@ function delayParallax (e) {
 var bgm1 = document.getElementById("bgmOne");
 var bgm2 = document.getElementById("bgmTwo");
 var bgm3 = document.getElementById("bgmThree");
+var playDisc = document.getElementsByClassName("record-container")[0];
 
 function onoff() {
     if (bgm1.muted == false) {
         bgm1.muted = true;
         bgm1.pause();
+        playDisc.style.animationName = "";
     } else if (bgm2.muted == false) {
         bgm2.muted = true;
         bgm2.pause();
+        playDisc.style.animationName = "";
     } else if (bgm3.muted == false) {
         bgm3.muted = true;
         bgm3.pause();
+        playDisc.style.animationName = "";
     }
 };
 
@@ -142,6 +153,7 @@ function onOne() {
     if (bgm2.muted == true && bgm3.muted == true) {
         bgm1.muted = false;
         bgm1.play();
+        playDisc.style.animationName = "rotate";
     } else {
         bgm2.muted = true;
         bgm2.pause();
@@ -149,6 +161,7 @@ function onOne() {
         bgm3.pause();
         bgm1.muted = false;
         bgm1.play();
+        playDisc.style.animationName = "rotate";
     }
 };
 
@@ -157,6 +170,7 @@ function onTwo() {
     if (bgm1.muted == true && bgm3.muted == true) {
         bgm2.muted = false;
         bgm2.play();
+        playDisc.style.animationName = "rotate";
     } else {
         bgm1.muted = true;
         bgm1.pause();
@@ -164,6 +178,7 @@ function onTwo() {
         bgm3.pause();
         bgm2.muted = false;
         bgm2.play();
+        playDisc.style.animationName = "rotate";
     }
 };
 
@@ -172,6 +187,7 @@ function onThree() {
     if (bgm1.muted == true && bgm2.muted == true) {
         bgm3.muted = false;
         bgm3.play();
+        playDisc.style.animationName = "rotate";
     } else {
         bgm1.muted = true;
         bgm1.pause();
@@ -179,6 +195,7 @@ function onThree() {
         bgm2.pause();
         bgm3.muted = false;
         bgm3.play();
+        playDisc.style.animationName = "rotate";
     }
 };
     

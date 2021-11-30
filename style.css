@@ -94,7 +94,48 @@ body {
     letter-spacing: 1px;
 }
 
- 
+/* Always Rotating Record Disc */
+.record-container {
+    height: 500px;
+    width: 500px;
+    bottom: -200px;
+    right: -200px;
+    position: fixed;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #221f1f;
+    z-index: -1;
+    animation-name: none;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.record-image {
+    height: 300px;
+    width: 300px;
+    border: 10px solid #edf5e1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.record-image img {
+    max-height: 100%;
+    transform: translateX(-175px);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Always Display Icon */
 .titlebox-topleft {
     display: none;
@@ -420,7 +461,7 @@ body {
     color: #2c3531;
     background-color: #edf5e1;
     box-shadow: 7.5px 7.5px #d1e8e2, -7.5px -7.5px #d1e8e2;
-    transform: translate(150px, 37.5px);
+    transform: translate(100px, 37.5px);
     overflow: hidden;
 }
 
@@ -439,7 +480,7 @@ body {
     padding: 20px;
     position: absolute;
     top: 100px;
-    right: 225px;
+    right: 275px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 0.5px;
@@ -534,7 +575,7 @@ body {
     padding: 20px;
     position: absolute;
     top: 100px;
-    left: 525px;
+    left: 475px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 0.5px;
@@ -630,7 +671,7 @@ body {
     padding: 20px;
     position: absolute;
     top: 100px;
-    right: 225px;
+    right: 275px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 0.5px;
@@ -750,7 +791,7 @@ body {
     padding: 20px;
     position: absolute;
     top: 100px;
-    left: 525px;
+    left: 475px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 0.5px;
@@ -841,7 +882,7 @@ body {
     padding: 20px;
     position: absolute;
     top: 100px;
-    right: 250px;
+    right: 300px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 10px;
@@ -857,7 +898,7 @@ body {
     position: absolute;
     background-color: #DEBA50;
     box-shadow: 7.5px 7.5px #917A34, -7.5px -7.5px #917A34;
-    transform: translate(150px, 37.5px);
+    transform: translate(100px, 37.5px);
     overflow: hidden;
 }
 
