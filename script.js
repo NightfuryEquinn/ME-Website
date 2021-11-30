@@ -120,16 +120,68 @@ function delayParallax (e) {
 };
 
 // Mute and Unmute Background Music
+var bgm1 = document.getElementById("bgmOne");
+var bgm2 = document.getElementById("bgmTwo");
+var bgm3 = document.getElementById("bgmThree");
+
 function onoff() {
-    var bgm = document.getElementById("bgm");
-    if (bgm.muted == true) {
-        bgm.muted = false;
-        bgm.play();
-    } else {
-        bgm.muted = true;
+    if (bgm1.muted == false) {
+        bgm1.muted = true;
+        bgm1.pause();
+    } else if (bgm2.muted == false) {
+        bgm2.muted = true;
+        bgm2.pause();
+    } else if (bgm3.muted == false) {
+        bgm3.muted = true;
+        bgm3.pause();
     }
 };
 
+// On Snow-Buried Tales 
+function onOne() {
+    if (bgm2.muted == true && bgm3.muted == true) {
+        bgm1.muted = false;
+        bgm1.play();
+    } else {
+        bgm2.muted = true;
+        bgm2.pause();
+        bgm3.muted = true;
+        bgm3.pause();
+        bgm1.muted = false;
+        bgm1.play();
+    }
+};
+
+// On Glistening Shards
+function onTwo() {
+    if (bgm1.muted == true && bgm3.muted == true) {
+        bgm2.muted = false;
+        bgm2.play();
+    } else {
+        bgm1.muted = true;
+        bgm1.pause();
+        bgm3.muted = true;
+        bgm3.pause();
+        bgm2.muted = false;
+        bgm2.play();
+    }
+};
+
+// On Chattering Snowflakes
+function onThree() {
+    if (bgm1.muted == true && bgm2.muted == true) {
+        bgm3.muted = false;
+        bgm3.play();
+    } else {
+        bgm1.muted = true;
+        bgm1.pause();
+        bgm2.muted = true;
+        bgm2.pause();
+        bgm3.muted = false;
+        bgm3.play();
+    }
+};
+    
 // Second Page Slideshow
 var defscdSlide = 1;
 showscdSlide(defscdSlide);

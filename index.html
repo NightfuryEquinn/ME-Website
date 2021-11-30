@@ -29,11 +29,18 @@
     <body>
         <div class='body-container'>
             <!--Background Music-->
-            <audio autoplay muted loop id="bgm"><source src="Pictures/Snow-Buried Tales.mp3" type="audio/mpeg"></audio>
+            <audio autoplay muted loop id="bgmOne"><source src="Pictures/Snow-Buried Tales.mp3" type="audio/mpeg"></audio>
+            <audio autoplay muted loop id='bgmTwo'><source src="Pictures/Glistening Shards.mp3" type="audio/mpeg"></audio>
+            <audio autoplay muted loop id='bgmThree'><source src="Pictures/Chattering Snowflakes.mp3" type="audio/mpeg"></audio>
             
-            <!--On Off Music-->
-            <div id="onoff-button">
-                <button onclick="onoff()"><i class="fas fa-music fa-1x"></i></button>
+            <!--Always On Off Music-->
+            <div class="music-container">
+                <button onclick="onoff()"><i class="fas fa-music"></i></button>
+                <div class="music-selection">
+                    <button onclick='onOne()'>Snow-Buried Tales</button>
+                    <button onclick='onTwo()'>Glistening Shards</button>
+                    <button onclick='onThree()'>Chattering Snowflakes</button>
+                </div>
             </div>
 
             <!--Always Display Icon-->
@@ -78,6 +85,22 @@
 
             <!--Animated Title Icon Page-->
             <div class='titlebox-middle'>
+                <div class='notify'>
+                    <span>S</span>
+                    <span>C</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>L</span>
+                </div>
+
+                <div class='notify'>
+                    <span>D</span>
+                    <span>O</span>
+                    <span>W</span>
+                    <span>N</span>
+                </div>
+
                 <video width="600px" height="600px" autoplay muted loop>
                     <source src="Pictures/ME WEBSITE.mp4" type="video/mp4">
                 </video>
@@ -167,9 +190,9 @@
                     </div>
 
                     <div class="scd-slide-button">
-                        <i class="fas fa-chevron-right" onclick='scdSlide(1)'></i>
-                        <i class="fas fa-chevron-right" onclick='scdSlide(2)'></i>
-                        <i class="fas fa-chevron-right" onclick='scdSlide(3)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='scdSlide(1)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='scdSlide(2)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='scdSlide(3)'></i>
                     </div>
                 </div>
             </div>
@@ -227,11 +250,11 @@
                     </div>
 
                     <div class="trd-slide-button">
-                        <i class="fas fa-chevron-right" onclick='trdSlide(1)'></i>
-                        <i class="fas fa-chevron-right" onclick='trdSlide(2)'></i>
-                        <i class="fas fa-chevron-right" onclick='trdSlide(3)'></i>
-                        <i class="fas fa-chevron-right" onclick='trdSlide(4)'></i>
-                        <i class="fas fa-chevron-right" onclick='trdSlide(5)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='trdSlide(1)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='trdSlide(2)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='trdSlide(3)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='trdSlide(4)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='trdSlide(5)'></i>
                     </div>
                 </div>
             </div>
@@ -286,11 +309,11 @@
                     </div>
 
                     <div class="frh-slide-button">
-                        <i class="fas fa-chevron-right" onclick='frhSlide(1)'></i>
-                        <i class="fas fa-chevron-right" onclick='frhSlide(2)'></i>
-                        <i class="fas fa-chevron-right" onclick='frhSlide(3)'></i>
-                        <i class="fas fa-chevron-right" onclick='frhSlide(4)'></i>
-                        <i class="fas fa-chevron-right" onclick='frhSlide(5)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='frhSlide(1)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='frhSlide(2)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='frhSlide(3)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='frhSlide(4)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='frhSlide(5)'></i>
                     </div>
                 </div>
             </div>
@@ -339,10 +362,10 @@
                     </div>
                 
                     <div class="fid-slide-button">
-                        <i class="fas fa-chevron-right" onclick='fidSlide(1)'></i>
-                        <i class="fas fa-chevron-right" onclick='fidSlide(2)'></i>
-                        <i class="fas fa-chevron-right" onclick='fidSlide(3)'></i>
-                        <i class="fas fa-chevron-right" onclick='fidSlide(4)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='fidSlide(1)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='fidSlide(2)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='fidSlide(3)'></i>
+                        <i class="fas fa-chevron-right fa-3x" onclick='fidSlide(4)'></i>
                     </div>
                 </div>
             </div>
