@@ -14,9 +14,9 @@ function scrollContent() {
         document.getElementsByClassName("sixth-page")[0].style.display = "none";
 
     } else if (ypx < 2000) {
-        document.getElementsByClassName("record-container")[0].style.display = "none";
+        document.getElementsByClassName("record-container")[0].style.display = "flex";
         document.getElementsByClassName("titlebox-middle")[0].style.display = "none";
-        document.getElementsByClassName("titlebox-topleft")[0].style.display = "none";
+        document.getElementsByClassName("titlebox-topleft")[0].style.display = "block";
         document.getElementsByClassName("left-menu")[0].style.display = "none";
         document.getElementsByClassName("main-page")[0].style.display = "flex";
         document.getElementsByClassName("second-page")[0].style.display = "none";

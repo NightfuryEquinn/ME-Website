@@ -490,7 +490,7 @@ body {
     box-shadow: 3.75px 3.75px #116466;
     border-radius: 50px;
     transform: rotate(calc(360deg / -6 * var(--icon)));
-    transition-duration: 1s;
+    transition-duration: .5s;
 }
 
 .nav-button span a:hover i {
