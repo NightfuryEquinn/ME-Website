@@ -32,6 +32,17 @@ body {
     font-family: 'Abel', sans-serif;
 }
 
+/* Body Container */
+.body-container {
+    height: 697px;
+    width: 1535px;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Always On Off Music */
 .music-container {
     margin-top: 50px;
@@ -368,17 +379,6 @@ body {
 .copyright-box img {
     max-width: 80%;
     transform: translate(50px, -100px);
-}
-
-/* Body Container */
-.body-container {
-    height: 697px;
-    width: 1535px;
-    position: absolute;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 
 /* All Page */
