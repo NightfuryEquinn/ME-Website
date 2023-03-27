@@ -5,3 +5,5 @@ The background music are soundtracks by HoYo-Mix or MiHoYo in my favourite game 
 Feel free to view it.
 
 Credits to Woon Zhi-le for the illustration in Homepage.
+
+Redirect [here](https://nightfuryequinn.github.io/ME-Website/)
